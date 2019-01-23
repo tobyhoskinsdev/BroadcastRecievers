@@ -31,7 +31,7 @@ public class MainActivity extends BaseActivity {
         intent.setAction("examples.aaronhoskins.com.broadcastrecievers.main_broadcast");
         intent.putExtra("key", "Can we go and get some darn sleep already");
         Log.d("TAG", "onCreate: SENDING BROADCAST");
-        sendBroadcast(intent);
+        sendBroadcast(intent, "android.permission.INTERNET");
 
         IntentFilter intentFilter1 = new IntentFilter("android.intent.action.AIRPLANE_MODE");
 
